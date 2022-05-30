@@ -1,0 +1,121 @@
+/*==============================
+* css all
+* ================================
+*/
+.mg{
+    margin: 0 2vw;
+}
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+.banner .box-thumbnail{
+    padding-top: 63%;
+}
+.banner .thumbnail-lazy{
+    bottom: 0;
+    z-index: 0;
+}
+.banner .decription{
+    position: absolute;
+    bottom: 11vw;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.banner .decription h1{
+    color: white;
+    text-transform: uppercase;
+    line-height: 3vw;
+    padding-bottom: 2vw;
+    font-size: 2.25vw;
+}
+.banner .decription p{
+    color: white;
+    font-size: 1vw;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 1vw 0;
+    width: 20vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+.discover-more{
+    width: 100%;
+    padding-bottom: 4vw;
+    border-bottom: 1px solid gray;
+}
+.discover-more .title p{
+    text-transform: uppercase;  
+    font-weight: 700;
+    font-size: 30px;
+}
+.discover-more .title p{
+    text-transform: uppercase;  
+    font-weight: 700;
+    font-size: 1.2vw;
+    padding: 2vw 0;
+}
+.discover-more .list-shop{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.discover-more .list-shop .shop{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+.discover-more .list-shop .shop img{
+    width: 100%; 
+    padding: 0 10px;
+}
+.discover-more .list-shop .shop p{ 
+    padding: 0 10px;
+}
+.discover-more .list-shop .shop:nth-child(1) p{ 
+    padding-left: 0;
+}
+.discover-more .list-shop .shop:nth-child(1) .thumbnail-lazy img{
+    padding-left: 0;
+}
+.discover-more .list-shop .shop .box-thumbnail{
+    padding-top: 100%;
+}
+.discover-more .list-shop .shop p{
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 1.05vw;
+    padding-top: 1vw;
+}
+.explore {
+    padding: 3.4vw 0;
+    border-bottom: 1px solid gray;
+}
+.explore p{
+    text-transform: uppercase;
+    font-size: 1vw;
+    padding-bottom: 0.7vw;
+}
+.explore ul{
+    display: inline-block;
+}
+
+.explore ul li {
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: 500;
+    float: left;
+    font-size: 0.8vw;
+    padding: 0.6vw 0.7vw;
+    margin-right: 1vw;
+}
+

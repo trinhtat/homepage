@@ -1,0 +1,402 @@
+@font-face {
+	font-family: Barlow;
+	src: url(../fonts/HelveticaNowText-Bold.ttf);
+	font-weight: 700;
+}
+@font-face {
+	font-family: Barlow;
+	src: url(../fonts/HelveticaNowText-LightItalic.ttf);
+	font-weight: 600;
+}
+@font-face {
+	font-family: Barlow;
+	src: url(../fonts/HelveticaNowText-Medium.ttf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: Barlow;
+	src: url(../fonts/HelveticaNowText-Regular.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Barlow;
+	src: url(../fonts/HelveticaNowText-Light.ttf);
+	font-weight: 300;
+}
+
+
+
+/* ==============================
+ * 2. Typography
+ * ============================== 
+ */
+*{
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	margin: 0;
+}
+
+html {
+	font-size: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Barlow', "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	line-height: 1.5;
+	margin: 0;
+	font-family: "Barlow", sans-serif;
+	font-weight: 300;
+
+}
+/* main{
+	margin: 0 2vw;
+} */
+
+/* ==============================
+ * 3. Root
+ * ============================== 
+ */
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul li a{
+	text-decoration: none;
+	color: black;
+}
+.box-thumbnail{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+.box-thumbnail img{
+	width: 100%;
+}
+.thumbnail-lazy{
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: calc(100%);
+	height: calc(100%);
+	display: block;
+	z-index: 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+}
+.thumbnail-lazy img{
+	height: 100%;
+	object-fit: cover;
+}
+
+/*============= HEADER =========*/
+/*========= css  style menu mobile =============*/
+header {
+	position: absolute;
+	z-index: 1;
+}
+#hd-mobile{
+	display: none;
+}
+.hd-mobile{
+	display: flex;
+	position: relative;
+	margin: 30px 2%;
+}
+header{
+	width: 100%;
+}
+.hd-desktop{
+	width: 100%;
+	display: inline-flex;
+	margin: 30px 2%;
+}
+.hd-desktop .logo{
+	width: 10%;
+	margin: auto 0;
+}
+
+.hd-desktop .menu{
+	width: 75%;
+	margin: auto 0;
+}
+.hd-desktop .icon{
+	width: 15%;
+	margin: auto 0;
+	display: inline-flex;
+}
+.icon .soluong{
+	position: relative;
+}
+.icon .soluong p{
+	position: absolute;
+	font-size: 0.8vw;
+    top: 0;
+    left: 0.4vw;
+}
+.hd-desktop .icon .fa {
+    font-size: 1.5vw !important;
+	padding-right: 1.6vw;
+}
+.hd-desktop .logo h1{
+	text-transform: uppercase;
+	font-size: 1.6vw;
+    line-height: 1.6vw;
+}
+.hd-desktop .logo h1 span{
+	text-transform: lowercase;
+	font-size: 1.6vw;
+	font-weight: 600;
+}
+.hd-desktop .menu ul{
+	display: inline-flex;
+}
+.hd-desktop .menu ul li{
+	text-transform: uppercase;
+	padding: 0 15px;
+	font-size: 0.8vw;
+}
+.icon img {
+    width: 2.5vw;
+    height: 30px;
+}
+
+.hd-mobile .logo h1{
+	font-size: 18px;
+	line-height: 20x;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.hd-mobile .logo h1 span{
+	font-size: 18px;
+	line-height: 20x;
+	text-transform: lowercase;
+	font-weight: 600;
+}
+.hd-mobile .icon {
+    position: absolute;
+	right: 0;
+	display: inline-flex;
+    top: 30%;
+}
+.hd-mobile ul li {
+    text-transform: uppercase;
+	text-align: right;
+}
+nav{
+	display: none;
+	position: absolute;
+    right: 2%;
+    top: 65px;
+}
+.hd-mobile .icon .soluong p{
+	position: absolute;
+    font-size: 10px;
+    top: 2px;
+    left: 7px;
+}
+.hd-mobile .icon .fa {
+    font-size: 22px;
+	padding-right: 15px
+}
+
+
+
+/*============== SEARCH ==============*/
+.search-wrapper {
+    position: absolute;
+	transform: translate(-90%, -50%);
+    top:50%;
+	z-index: 10;
+}
+.input-holder .search-input::-webkit-input-placeholder{
+	color: white;
+}
+/* .search-wrapper.active {
+
+} */
+.color-icon .fa{
+	color: white;
+}
+
+.search-wrapper .input-holder {    
+    height: 70px;
+    width:70px;
+    overflow: hidden;
+    background: rgba(255,255,255,0);
+    border-radius:6px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.search-wrapper.active .input-holder {
+    width:85vw;
+    border-radius: 50px;
+    background: rgba(0,0,0,0.8);
+    transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+}
+.search-wrapper .input-holder .search-input {
+    width:100%;
+    height: 50px;
+    padding:0px 70px 0 20px;
+    opacity: 0;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background: transparent;
+    box-sizing: border-box;
+    border:none;
+    outline:none;
+    font-family:"Open Sans", Arial, Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color:#FFF;
+    transform: translate(0, 60px);
+    transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    transition-delay: 0.3s;
+}
+.search-wrapper.active .input-holder .search-input {
+    opacity: 1;
+    transform: translate(0, 10px);
+}
+.search-wrapper .input-holder .search-icon {
+    width:70px;
+    height:70px;
+    border:none;
+    border-radius:6px;
+    background: none;
+    padding:0px;
+    outline:none;
+    position: relative;
+    z-index: 2;
+    float:right;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.search-wrapper.active .input-holder .search-icon {
+    width: 50px;
+    height:50px;
+    margin: 10px;
+    border-radius: 30px;
+}
+.search-wrapper .input-holder .search-icon span {
+    width:22px;
+    height:22px;
+    display: inline-block;
+    vertical-align: middle;
+    position:relative;
+    transform: rotate(45deg);
+    transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+}
+.search-wrapper.active .input-holder .search-icon span {
+    transform: rotate(-45deg);
+}
+.search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
+    position: absolute; 
+    content:'';
+}
+.search-wrapper .input-holder .search-icon span::before {
+    width: 4px;
+    height: 11px;
+    left: 9px;
+    top: 18px;
+    border-radius: 2px;
+    background: #FE5F55;
+}
+.search-wrapper .input-holder .search-icon span::after {
+    width: 14px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+    border-radius: 16px;
+    border: 4px solid #FE5F55;
+}
+.search-wrapper .close {
+    position: absolute;
+    z-index: 1;
+    top:24px;
+    right:20px;
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
+    transition-delay: 0.2s;
+}
+.search-wrapper.active .close {
+    right:-50px;
+    transform: rotate(45deg);
+    transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    transition-delay: 0.5s;
+}
+.search-wrapper .close::before, .search-wrapper .close::after {
+    position:absolute;
+    content:'';
+    background: #FE5F55;
+    border-radius: 2px;
+}
+.search-wrapper .close::before {
+    width: 5px;
+    height: 25px;
+    left: 10px;
+    top: 0px;
+}
+.search-wrapper .close::after {
+    width: 25px;
+    height: 5px;
+    left: 0px;
+    top: 10px;
+}
+
+
+
+
+
+
+
+
+
+/*============== FOOTER ==============*/
+/* footer{
+	display: inline-flex;
+} */
+.footer1 {
+    text-align: center;
+	text-align: center;
+    padding: 1.5vw 0;
+    border-bottom: 1px solid gray;
+}
+.footer1 ul li {
+	text-transform: uppercase;
+    font-weight: 400;
+    padding: 0 1.1vw;
+    display: inline-flex;
+    font-size: 0.9vw;
+}
+.copyright {
+    text-align: center;
+	padding-top: 1.8vw;
+    padding-bottom: 2.5vw;
+}
+.copyright p{
+    font-weight: 700;
+	font-size: 1vw;
+}
+.copyright p span{
+    font-weight: 600;
+}
